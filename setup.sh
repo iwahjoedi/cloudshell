@@ -10,7 +10,7 @@ yes | rm -rf nvim-linux64.tar.gz
 
 echo -e "Renaming dot-files...\n"
 cat dot-bashrc >> $HOME/.bashrc
-mv dot-zshrc $HOME/.zshrc
+cp dot-zshrc $HOME/.zshrc
 cat dot-tmux.conf >> .tmux.conf
 
 echo -e "Installing Zsh...\n"
