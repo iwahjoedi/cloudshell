@@ -8,15 +8,17 @@ tar zxvf nvim-linux64.tar.gz
 mv nvim-linux64 $HOME/
 yes | rm -rf nvim-linux64.tar.gz
 
-echo -e "Renaming dot-files...\n"
-cat dot-bashrc >> $HOME/.bashrc
-cp dot-zshrc $HOME/.zshrc
-cat dot-tmux.conf >> .tmux.conf
-
 echo -e "Installing Zsh...\n"
 sudo apt install zsh
 
 echo -e "Installing Oh-MyZsh...\n"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo -e "Renaming dot-files...\n"
+cat dot-bashrc >> $HOME/.bashrc
+cat dot-zshrc >> $HOME/.zshrc
+cat dot-tmux.conf >> $HOME/.tmux.conf
+exit
+
 
 
