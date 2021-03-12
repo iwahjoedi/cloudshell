@@ -3,6 +3,11 @@
 echo -e "Downloading Neovim...\n"
 wget https://github.com/neovim/neovim/releases/download/v0.4.4/nvim-linux64.tar.gz
 
+echo -e "Downloading Android SDK...\n"
+wget dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip
+unzip -d android-sdk commandlinetools-linux-6858069_latest.zip
+mv android-sdk $HOME/
+
 echo -e "Extracting Neovim...\n"
 tar zxvf nvim-linux64.tar.gz
 mv nvim-linux64 $HOME/

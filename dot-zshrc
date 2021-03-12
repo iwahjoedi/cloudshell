@@ -105,8 +105,30 @@ source $ZSH/oh-my-zsh.sh
 # Enable backspace
 export TERM=xterm-256color 
 
-# Setup nvim
+# Setup Neovim
 export NVIM_HOME="$HOME/nvim-linux64"
 export PATH="$PATH:$NVIM_HOME/bin"
+
+# Setup Android SDK
+export BUILD_TOOLS="30.0.3"
+export ANDROID_AVD_HOME="$HOME/.android/avd"
+export ANDROID_SDK_ROOT="$HOME/android-sdk"
+export ANDROID_HOME="$HOME/android-sdk"
+export PATH="$ANDROID_SDK_ROOT/cmdline-tools/bin:$PATH"
+export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
+export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
+export PATH="$ANDROID_SDK_ROOT/tools:$PATH"
+export PATH="$ANDROID_SDK_ROOT/tools/bin:$PATH"
+# export PATH="$ANDROID_SDK_ROOT/build-tools/$BUILD_TOOLS:$PATH"
+
+# export PATH="$ANDROID_HOME/platform-tools/:$ANDROID_HOME/emulator:$PATH"
+
+# ANDROID BUILD ON CD/CI
+# - export ANDROID_HOME=$PWD/android-sdk
+# - yes | android-sdk-linux/tools/bin/sdkmanager --sdk_root=${ANDROID_HOME} --licenses
+# - android-sdk-linux/tools/bin/sdkmanager --sdk_root=${ANDROID_HOME} "platform-tools" "platforms;android-${ANDROID_COMPILE_SDK}" >/dev/null
+
+
+
 
 
