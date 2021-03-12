@@ -6,9 +6,8 @@ FILE=/bin/zsh
 if [ -f "$FILE" ]; then
     echo "$FILE exists."
     zsh
-    tmux new-session -s ijoe
 else
-    echo "$FILE does not exist. Installing zsh"
+    echo "$FILE does not exist. Installing $FILE"
     sudo apt-get -y install zsh
     zsh
 fi
