@@ -5,6 +5,7 @@ wget https://github.com/neovim/neovim/releases/download/v0.4.4/nvim-linux64.tar.
 
 echo -e "Extracting Neovim...\n"
 tar zxvf nvim-linux64.tar.gz
+mv nvim-linux64 $HOME/
 yes | rm -rf nvim-linux64.tar.gz
 
 echo -e "Renaming dot-files...\n"
