@@ -12,10 +12,10 @@ echo -e "Downloading Android SDK...\n"
 wget dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip
 unzip -d android-sdk commandlinetools-linux-6858069_latest.zip
 mv android-sdk $HOME/
-rm -rf commandlinetools-linux-6858069_latest.zip
+yes | rm -rf commandlinetools-linux-6858069_latest.zip
 
 echo -e "Installing Zsh...\n"
-sudo apt install zsh
+sudo apt install zsh -y
 
 echo -e "Installing Oh-MyZsh...\n"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
